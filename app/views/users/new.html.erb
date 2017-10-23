@@ -1,1 +1,33 @@
 <h1>NEW USER</h1>
+
+<%= link_to "Show All Restaurants", root_path %>
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email%>
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :role %>
+    <%= f.text_field :role %>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %><br>
+</p>
+</div>
+<p>
+  <%= f.submit "Sign up!" %>
+</p>
+<% end %>
