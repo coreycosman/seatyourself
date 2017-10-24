@@ -1,9 +1,8 @@
-<h1>Hello</h1>
+<h1>Check out these cool restaurants where you can seat yo'self!</h1>
 
+<div class="list">
 <% @restaurants.each do |restaurant| %>
-
-<p>
-  <%= restaurant.name %>
-  <%= restaurant.capacity %>
-</p>
+  <h2><%= restaurant.name %></h2>
+  <!-- summary goes here -->
 <% end %>
+</div>

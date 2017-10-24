@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Restaurant.create(name: 'Lalibela', opening_time: 11, closing_time: 22, capacity: 100)
+Restaurant.create(name: 'Tokyo Sushi', opening_time: 11, closing_time: 22, capacity: 50)
+Restaurant.create(name: 'Imonay', opening_time: 11, closing_time: 22, capacity: 25)

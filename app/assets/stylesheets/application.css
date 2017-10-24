@@ -16,7 +16,6 @@
  html
  {
    margin: 0 auto;
-   font-family: source-sans-pro, Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
    box-sizing: border-box;
    width: 70%;
    background-color: #f7f7f7;
@@ -25,6 +24,8 @@
  body
  {
    background-color: white;
+   font-family: "Niveau Grotesk", sans-serif;
+
  }
 
  header
@@ -32,7 +33,6 @@
   overflow: hidden;
   margin: 0;
   background-color: white;
-  border: 1px solid black;
  }
 
 header h1
@@ -72,4 +72,9 @@ header h3
   background-color: #2f7b97;
   color: white;
   border-radius: 0.2rem;
+}
+
+.list
+{
+  border: 1px solid black;
 }
