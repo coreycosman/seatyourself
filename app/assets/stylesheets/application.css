@@ -102,6 +102,11 @@ header h3
   display: inline-block;
 }
 
+a:active
+{
+
+}
+
  nav a
  {
   color: #2f7b97;
@@ -133,15 +138,17 @@ footer p
   padding: 10px;
 }
 
-#sign-up-button a
+header p a:first-child
 {
   background-color: #2f7b97;
   color: white;
   border-radius: 0.2rem;
 }
-#sign-up-button a:hover
+
+header p a:first-child a:hover
 {
   background-color: #28627a;
+  border-radius: 0.2rem;
 }
 
 /*STYLE OF TITLE ON EVERY VIEW*/
