@@ -1,4 +1,9 @@
 <h1><%= @restaurant.name %></h1>
+<h3> Opens: <%= @restaurant.opening_time %> AM </h3>
+<h3> Closes: <%= @restaurant.closing_time %> PM </h3>
+<h3> Capacity: <%= @restaurant.capacity %></h3>
+
+<% link_to "Create Restaurant", new_restaurant_path %>
 
 
 

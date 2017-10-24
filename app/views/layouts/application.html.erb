@@ -14,8 +14,19 @@
     <h1>Seat<strong>Yo'Self</strong></h1>
     <h3><em>Ain't no better treat than a seat!</em></h3>
     <div class="user-start">
-      <p><%= link_to("Sign Up", new_user_path) %><%= link_to("Sign In", new_session_path)%></p>
+      <p>
+        <%= link_to "Sign Up", new_user_path %>
+        <%= link_to "Sign In", new_session_path %>
+      </p>
     </div>
+      <% if current_user %>
+        <p>
+          Signed In As: <%= current_user.name %>!
+          |
+          <%= link_to "Logout", session_path(current), method: :delete %>
+        </p>
+      <% else %>
+      <% end %>
     <nav>
       <%= link_to("Home", root_url) %>
       <%= link_to("Add your restaurant today!", "/restaurants/new") %>
