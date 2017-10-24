@@ -9,6 +9,7 @@ class ReservationsController < ApplicationController
     # user_id = current_user.id
 
     @reservation.restaurant_id = @restaurant.id
+    @reservation.user_id = @user.id
 
     if @reservation.save
       flash.notice = "Reservation has been successfully created."
