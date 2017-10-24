@@ -145,7 +145,7 @@ header p a:first-child
   border-radius: 0.2rem;
 }
 
-header p a:first-child a:hover
+header p a:first-child:hover
 {
   background-color: #28627a;
   border-radius: 0.2rem;
