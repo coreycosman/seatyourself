@@ -14,7 +14,12 @@
     <h1>Seat<strong>Yo'Self</strong></h1>
     <h3><em>Ain't no better treat than a seat!</em></h3>
     <div class="user-start">
-      <%= link_to "Home", root_path %>
+      <p>
+        <%= link_to "Sign Up", new_user_path %>
+        |
+        <%= link_to "Sign In", new_session_path %>
+      </p>
+    </div>
       <% if current_user %>
         <p>
           Signed In As: <%= current_user.name %>!
@@ -22,18 +27,14 @@
           <%= link_to "Logout", session_path(current), method: :delete %>
         </p>
       <% else %>
-        <p>
-          <%= link_to "Sign Up", new_user_path %>
-          |
-          <%= link_to "Sign In", new_session_path %>
-        </p>
       <% end %>
 
-    <nav>
-
-    </nav>
-
-  </header>
+      <nav>
+          <%= link_to("Home", root_url) %>
+          <%= link_to("Add your restaurant today!", "/restaurants/new") %>
+        </nav>
+        <p id="stock-image"></p>
+      </header>
 
   <% if flash[:notice] %>
     <p class="notice"><%= flash[:notice] %></p>
@@ -41,8 +42,11 @@
   <% if flash[:alert] %>
     <p class="alert"><%= flash[:alert] %></p>
   <% end %>
+  <main>
+    <%= yield %>
+  </main>
 
-<%= yield %>
+  <footer><p>&copy; Seat Yo'Self, a Bitmaker Project</p></footer>
 
 </body>
 </html>

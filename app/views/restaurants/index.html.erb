@@ -1,8 +1,16 @@
 <h1>Check out these cool restaurants where you can seat yo'self!</h1>
+<h1 class="title">Check out these cool restaurants where you can seat yo'self!</h1>
 
 <div class="list">
 <% @restaurants.each do |restaurant| %>
-  <h2><%= restaurant.name %></h2>
-  <!-- summary goes here -->
+  <div class="each-restaurant">
+    <h2><%= restaurant.name %></h2>
+    <%= image_tag("SY.png", :alt => "SY") %>
+    <p>Summary goes here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <%= link_to("Click for more details...", restaurant_path(restaurant)) %>
+  </div>
 <% end %>
 </div>
