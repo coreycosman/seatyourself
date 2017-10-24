@@ -27,6 +27,7 @@
 
  body
  {
+     margin: 0;
    font-family: "Niveau Grotesk", sans-serif;
  }
 
@@ -40,16 +41,15 @@
  header
  {
   overflow: hidden;
-  margin: 0;
   background-color: white;
-    border-bottom: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
  }
 
- nav a
+ nav
  {
-   border-top: 1px solid #EFEFEF;
-  color: #2f7b97;
-  padding: 5px;
+   display: block;
+  border-top: 1px solid #EFEFEF;
+  padding: 10px;
  }
 
  a
@@ -61,6 +61,7 @@
  {
    color: white;
    background-color: #363636;
+   padding: 20px;
  }
 
  /*SPECIFICS*/
@@ -68,6 +69,20 @@
 header img
 {
   width: 5rem;
+}
+
+header p
+{
+  margin: 0
+}
+
+#stock-image
+{
+  display: block;
+  width: 100%;
+  background-image: url("https://www.piccolotrattoria.com/wp-content/uploads/2013/01/book-table-400x270.jpg");
+  height: 405px;
+  background-position: center;
 }
 
 header h1
@@ -87,41 +102,55 @@ header h3
   display: inline-block;
 }
 
+ nav a
+ {
+  color: #2f7b97;
+  padding: 5px;
+ }
+
+nav a:first-child
+{
+  border-right: 1px solid #EFEFEF;
+}
+
 footer p
 {
   text-align: center;
 }
 
+/*CLASSES AND IDS*/
+
+/*USER BEGINNING ACTIONS*/
 .user-start
 {
   float: right;
 }
 
-.user-start p
+.user-start a
 {
   position: relative;
   display: inline-block;
   padding: 10px;
-  margin-top: 45px;
 }
 
-
-.user-start p:first-child
+#sign-up-button a
 {
   background-color: #2f7b97;
   color: white;
   border-radius: 0.2rem;
 }
-.user-start a:hover
+#sign-up-button a:hover
 {
   background-color: #28627a;
 }
 
+/*STYLE OF TITLE ON EVERY VIEW*/
 .title
 {
   text-align: center;
 }
 
+/*MAIN INDEX */
 .list
 {
   margin: 0 10em;
@@ -132,5 +161,6 @@ footer p
 .each-restaurant
 {
   margin: 5em 0;
-  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EFEFEF;
+  line-height: 1.5;
 }
