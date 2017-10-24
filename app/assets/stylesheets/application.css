@@ -45,6 +45,13 @@
     border-bottom: 1px solid #EFEFEF;
  }
 
+ nav a
+ {
+   border-top: 1px solid #EFEFEF;
+  color: #2f7b97;
+  padding: 5px;
+ }
+
  a
  {
    text-decoration: none;
@@ -109,4 +116,10 @@ header h3
   margin: 0 10em;
   border-bottom: 1px solid #EFEFEF;
   width: 75%;
+}
+
+.each-restaurant
+{
+  margin: 5em 0;
+  border-bottom: 1px solid #EFEFEF;
 }
