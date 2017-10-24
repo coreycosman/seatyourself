@@ -13,19 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+/*MAIN BODIES*/
+
  html
  {
    margin: 0 auto;
    box-sizing: border-box;
    width: 70%;
+   height: 100%;
    background-color: #f7f7f7;
  }
 
  body
  {
-   background-color: white;
    font-family: "Niveau Grotesk", sans-serif;
+ }
 
+ main
+ {
+  margin: 2em;
+  background-color: white;
+  padding: 20px;
  }
 
  header
@@ -33,11 +42,24 @@
   overflow: hidden;
   margin: 0;
   background-color: white;
+    border-bottom: 1px solid #EFEFEF;
  }
+
+ a
+ {
+   text-decoration: none;
+ }
+
+ /*SPECIFICS*/
+
+header img
+{
+  width: 5rem;
+}
 
 header h1
 {
-  font-size: 3em;
+  font-size: 2em;
   color: #d70d49;
   display: inline-block;
 }
@@ -50,7 +72,6 @@ header h1 strong
 header h3
 {
   display: inline-block;
-  text-align: center;
 }
 
 .user-start
@@ -73,10 +94,19 @@ header h3
   color: white;
   border-radius: 0.2rem;
 }
+.user-start a:hover
+{
+  background-color: #28627a;
+}
+
+.title
+{
+  text-align: center;
+}
 
 .list
 {
+  margin: 0 10em;
   border-bottom: 1px solid #EFEFEF;
   width: 75%;
-  margin: 2em;
 }

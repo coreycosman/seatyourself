@@ -10,11 +10,11 @@
 
 
   <header>
-    <%= image_tag("/images/SY.png", :alt => "SY") %>
+    <%= image_tag("SY.png", :alt => "SY") %>
     <h1>Seat<strong>Yo'Self</strong></h1>
     <h3><em>Ain't no better treat than a seat!</em></h3>
     <div class="user-start">
-      <p>Sign Up</p> <p>Sign In</p>
+      <p><%= link_to("Sign Up", new_user_path) %></p> <p><%= link_to("Sign In", new_session_path)%></p>
     </div>
     <nav class="">
       <ul>
@@ -31,8 +31,9 @@
   <% if flash[:alert] %>
     <p class="alert"><%= flash[:alert] %></p>
   <% end %>
-
-<%= yield %>
+  <main>
+    <%= yield %>
+  </main>
 
 </body>
 </html>
