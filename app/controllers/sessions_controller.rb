@@ -10,7 +10,7 @@ def create
    render new_user_path
  end
 end
-def desroy
+def destroy
   session[:user_id] = nil
   redirect_to restaurants_url, notice: 'Logged out!'
 end
