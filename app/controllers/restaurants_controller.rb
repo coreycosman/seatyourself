@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
 
+  before_action :ensure_logged_in, except: [:index]
+
   def index
     @restaurants = Restaurant.all
   end
@@ -9,8 +11,8 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    find_restaurant
     @reservation = Reservation.new
+    find_restaurant
   end
 
 
@@ -24,14 +26,15 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
-    find_restaurant
+    ensure_ownership
   end
 
   def update
-    find_restaurant
-    if @restaurant.save(restaurant_params)
-      redirect_to restaurants_path
+    ensure_ownership
+    if @restaurant && @restaurant.update(restaurant_params)
+      redirect_to root_path
     else
+      flash.now[:alert] = @restaurant.error.full_messages
       render :edit
     end
   end

@@ -10,5 +10,19 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
-  
+
+  def ensure_logged_in
+    unless current_user
+      flash[:alert] = "Please Log In"
+      redirect_to new_sessions_path
+    end
+  end
+
+  def ensure_ownership
+    @restaurant = Club.find(params[:id])
+    if session[:user_id] == nil || @restaurant.user_id != current_user.id
+      redirect_to root_path
+    end
+  end
+
 end
