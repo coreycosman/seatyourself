@@ -1,23 +1,23 @@
-<h1> Add/Edit a Restaurant </h1>
 <%= link_to "Show All Restaurants", root_path %>
 <%= form_for restaurant do |f| %>
-  <div class="field">
+  <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :opening_time %>
-    <%= f.number_field :opening_time %>
-  </div>
-  <div class="field">
-    <%= f.label :closing_time %>
-    <%= f.number_field :closing_time %>
-  </div>
-  <div class="field">
+  </p>
+  <p>
+    <%= f.label :date %>
+    <%= f.number_field :date %>
+  </p>
+  <p>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </p>
+  <p>
     <%= f.label :capacity %>
     <%= f.number_field :capacity %>
-  </div>
-  <div class="actions">
+  </p>
+  <p>
     <%= f.submit %>
-  </div>
+  </p>
 <% end %>
+jthregafwwahsjfdkfghrew
