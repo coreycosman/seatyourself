@@ -57,6 +57,12 @@
    text-decoration: none;
  }
 
+ footer
+ {
+   color: white;
+   background-color: #363636;
+ }
+
  /*SPECIFICS*/
 
 header img
@@ -79,6 +85,11 @@ header h1 strong
 header h3
 {
   display: inline-block;
+}
+
+footer p
+{
+  text-align: center;
 }
 
 .user-start
