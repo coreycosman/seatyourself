@@ -16,8 +16,11 @@
     <div class="user-start">
       <p>Sign Up</p> <p>Sign In</p>
     </div>
-    <nav>
-
+    <nav class="">
+      <ul>
+        <li><%= link_to("Home", root_url) %></li>
+        <li><%= link_to("Add your restaurant today!", "/restaurants/new") %></li>
+      </ul>
     </nav>
 
   </header>

@@ -76,5 +76,7 @@ header h3
 
 .list
 {
-  border: 1px solid black;
+  border-bottom: 1px solid #EFEFEF;
+  width: 75%;
+  margin: 2em;
 }
