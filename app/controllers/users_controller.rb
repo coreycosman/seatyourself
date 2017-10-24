@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
       if @user.save
         flash[:notice] = "Account Successfully Created!"
+        session[:user_id] = user.id 
         redirect_to root_path
       else
         flash.now[:error] = "Sorry, try again!"
