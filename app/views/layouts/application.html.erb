@@ -10,13 +10,12 @@
 
 
   <header>
-    <%= image_tag("/images/SY.png", :alt => "SY") %>
+    <%= image_tag("SY.png", :alt => "SY") %>
     <h1>Seat<strong>Yo'Self</strong></h1>
     <h3><em>Ain't no better treat than a seat!</em></h3>
     <div class="user-start">
       <p>
         <%= link_to "Sign Up", new_user_path %>
-        |
         <%= link_to "Sign In", new_session_path %>
       </p>
     </div>
@@ -28,13 +27,12 @@
         </p>
       <% else %>
       <% end %>
-
-      <nav>
-          <%= link_to("Home", root_url) %>
-          <%= link_to("Add your restaurant today!", "/restaurants/new") %>
-        </nav>
-        <p id="stock-image"></p>
-      </header>
+    <nav>
+      <%= link_to("Home", root_url) %>
+      <%= link_to("Add your restaurant today!", new_restaurant_path) %>
+    </nav>
+    <p id="stock-image"></p>
+  </header>
 
   <% if flash[:notice] %>
     <p class="notice"><%= flash[:notice] %></p>

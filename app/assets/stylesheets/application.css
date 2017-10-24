@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+/*MAIN BODIES*/
+
  html
   {
     margin: 0 auto;
@@ -65,7 +68,11 @@
 
  header img
  {
-   width: 5rem;
+   margin: 0 auto;
+   box-sizing: border-box;
+   width: 70%;
+   height: 100%;
+   background-color: #f7f7f7;
  }
 
  header p
@@ -101,7 +108,15 @@
 
  a:active
  {
+     margin: 0;
+   font-family: "Niveau Grotesk", sans-serif;
+ }
 
+ main
+ {
+  margin: 2em;
+  background-color: white;
+  padding: 20px;
  }
 
   nav a
@@ -112,59 +127,131 @@
 
  nav a:first-child
  {
-   border-right: 1px solid #EFEFEF;
+  overflow: hidden;
+  background-color: white;
+  border-bottom: 1px solid #EFEFEF;
  }
 
- footer p
+ nav
  {
-   text-align: center;
+   display: block;
+  border-top: 1px solid #EFEFEF;
+  padding: 10px;
  }
+
+ a
+ {
+   text-decoration: none;
+ }
+
+ footer
+ {
+   color: white;
+   background-color: #363636;
+   padding: 20px;
+ }
+
+ /*SPECIFICS*/
+
+header img
+{
+  width: 5rem;
+}
+
+header p
+{
+  margin: 0
+}
+
+#stock-image
+{
+  display: block;
+  width: 100%;
+  background-image: url("https://www.piccolotrattoria.com/wp-content/uploads/2013/01/book-table-400x270.jpg");
+  height: 405px;
+  background-position: center;
+}
+
+header h1
+{
+  font-size: 2em;
+  color: #d70d49;
+  display: inline-block;
+}
 
  /*CLASSES AND IDS*/
 
- /*USER BEGINNING ACTIONS*/
- .user-start
+header h3
+{
+  display: inline-block;
+}
+
+a:active
+{
+
+}
+
+ nav a
  {
-   float: right;
+  color: #2f7b97;
+  padding: 5px;
  }
 
- .user-start a
- {
-   position: relative;
-   display: inline-block;
-   padding: 10px;
- }
+nav a:first-child
+{
+  border-right: 1px solid #EFEFEF;
+}
 
- header p a:first-child
- {
-   background-color: #2f7b97;
-   color: white;
-   border-radius: 0.2rem;
- }
+footer p
+{
+  text-align: center;
+}
 
- header p a:first-child a:hover
- {
-   background-color: #28627a;
-   border-radius: 0.2rem;
- }
+/*CLASSES AND IDS*/
 
- /*STYLE OF TITLE ON EVERY VIEW*/
- .title
- {
-   text-align: center;
- }
+/*USER BEGINNING ACTIONS*/
+.user-start
+{
+  float: right;
+}
 
- /*MAIN INDEX */
- .list
- {
-   margin: 0 10em;
-   border-bottom: 1px solid #EFEFEF;
-   width: 75%;
- }
+.user-start a
+{
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
 
- .each-restaurant
- {
-   margin: 5em 0;
-   border-top: 1px solid #EFEFEF;
-   line-height: 1.5;
- }
+header p a:first-child
+{
+  background-color: #2f7b97;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+header p a:first-child:hover
+{
+  background-color: #28627a;
+  border-radius: 0.2rem;
+}
+
+/*STYLE OF TITLE ON EVERY VIEW*/
+.title
+{
+  text-align: center;
+}
+
+/*MAIN INDEX */
+.list
+{
+  margin: 0 10em;
+  border-bottom: 1px solid #EFEFEF;
+  width: 75%;
+}
+
+.each-restaurant
+{
+  margin: 5em 0;
+  border-top: 1px solid #EFEFEF;
+  line-height: 1.5;
+}
