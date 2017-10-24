@@ -1,8 +1,13 @@
 <%= link_to "Show All Restaurants", root_path %>
 <%= form_for ([@restaurant, @reservation]) do |f| %>
+<% reservation.errors.full_messages.each do |m|%>
+<p>
+  <%= m %>
+</p>
+<% end %>
   <div class="field">
     <%= f.label :time %>
-    <%= f.time_field :time %>
+    <%= f.select :time, reservation_times  %>
   </div>
   <div class="field">
     <%= f.label :date %>

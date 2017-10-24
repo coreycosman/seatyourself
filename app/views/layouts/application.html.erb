@@ -29,7 +29,9 @@
       <% end %>
     <nav>
       <%= link_to("Home", root_url) %>
-      <%= link_to("Add your restaurant today!", new_restaurant_path) %>
+      <% if current_user.role == "owner" %>
+        <%= link_to("Add your restaurant today!", new_restaurant_path) %>
+        <% end %>
     </nav>
     <p id="stock-image"></p>
   </header>

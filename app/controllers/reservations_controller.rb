@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
       flash.notice = "Reservation has been successfully created."
       redirect_to restaurants_path
     else
-      render restaurant_path(@restaurant)
+      render "restaurants/show"
     end
   end
 
