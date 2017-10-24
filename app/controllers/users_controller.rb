@@ -6,10 +6,11 @@ class UsersController < ApplicationController
       @user.email = params[:user][:email]
       @user.password = params[:user][:password]
       @user.password_confirmation = params[:user][:password_confirmation]
+      @user.role = params[:user][:role]
 
       if @user.save
         flash[:notice] = "Account Successfully Created!"
-        session[:user_id] = user.id 
+        session[:user_id] = @user.id
         redirect_to root_path
       else
         flash.now[:error] = "Sorry, try again!"
