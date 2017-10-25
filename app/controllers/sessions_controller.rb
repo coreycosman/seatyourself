@@ -5,9 +5,9 @@ def create
  if user && user.authenticate(params[:password])
    session[:user_id] = user.id
    redirect_to restaurants_path, notice: 'Logged in!'
-
  else
-   render new_user_path
+   flash.now[:error] = "Sorry, try again!"
+   render new_session_path 
  end
 end
 def destroy
