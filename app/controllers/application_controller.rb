@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user ||=User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   helper_method :current_user
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_ownership
-    @restaurant = Club.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
     if session[:user_id] == nil || @restaurant.user_id != current_user.id
       redirect_to root_path
     end

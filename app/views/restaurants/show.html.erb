@@ -5,7 +5,17 @@
 
 <% link_to "Create Restaurant", new_restaurant_path %>
 
+<% if current_user && current_user.role == "owner" && @restaurant.user_id == current_user.id %>
+  <%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant) %>
+<% end %>
 
+
+
+
+
+<% if current_user && current_user.role == "owner" && @restaurant.user_id == current_user.id %>
+  <%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete this restaurant?"}  %>
+<% end %>
 
 
 <h3>Make a reservation!</h3>
