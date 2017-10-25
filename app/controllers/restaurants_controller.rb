@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-  before_action :ensure_logged_in, except: [:index]
+  before_action :ensure_logged_in, except: [:index, :show]
   before_action :ensure_ownership, only: [:edit, :update, :destroy]
 
   def index
